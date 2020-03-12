@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { makeStyles } from "@material-ui/styles";
 import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
@@ -8,6 +8,7 @@ import Stars2 from "./Stars2";
 import Stars3 from "./Stars3";
 import Buttons from "./Buttons";
 import Rules from "./Rules";
+import GameBoard from "./GameBoard";
 
 const useStyles = makeStyles(
   theme => ({
@@ -24,6 +25,7 @@ const useStyles = makeStyles(
       position: "relative",
       top: 0,
       left: 0,
+      width: "100%",
       height: "100%",
       display: "flex",
       flexWrap: "wrap",
@@ -61,6 +63,11 @@ function Header(props) {
   const classes = useStyles(props);
   const [stateApp, setStateApp] = useState("home");
   const container = useRef();
+  //temporaire pour dev
+  useEffect(() => {
+    setStateApp("game");
+  }, []);
+  //setStateApp("game");
 
   return (
     <>
@@ -79,6 +86,7 @@ function Header(props) {
           </>
         )}
         {stateApp === "rules" && <Rules state={setStateApp} />}
+        {stateApp === "game" && <GameBoard state={setStateApp} />}
       </div>
     </>
   );
