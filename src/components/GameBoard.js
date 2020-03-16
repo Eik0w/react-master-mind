@@ -4,7 +4,7 @@ import clsx from "clsx";
 import GameResult from "./GameResult";
 import GameTry from "./GameTry";
 import GameColor from "./GameColor";
-import carbon from "../img/carbon.png";
+import bg from "../img/try.png";
 
 const useStyles = makeStyles(
   theme => ({
@@ -21,25 +21,30 @@ const useStyles = makeStyles(
       flexWrap: "wrap",
       alignSelf: "center",
       justifySelf: "center",
-      background: "#fefefe",
       borderRadius: "20px 0 0 20px",
       padding: 20,
-      boxShadow: "0 0 200px rgba(255,255,255,0.4)"
+      background: "url(" + bg + ") repeat 0 0 #fff",
+      borderTop: "1px solid #e3e3e3",
+      borderLeft: "1px solid #e3e3e3",
+      borderBottom: "1px solid #e3e3e3"
     },
     boardCenter: {
       flex: "0 1 65%",
-      background: "#fefefe",
-      padding: 20,
       borderRadius: 20,
-      boxShadow: "0 0 200px rgba(255,255,255,0.4)"
+      boxShadow: "0 0 200px rgba(255,255,255,0.4)",
+      background: "url(" + bg + ") repeat 0 0 #fff",
+      overflow: "hidden"
     },
     boardRight: {
       flex: "0 1 20%",
       alignSelf: "center",
-      background: "#fefefe",
       borderRadius: "0 20px 20px 0",
       padding: 20,
-      boxShadow: "0 0 200px rgba(255,255,255,0.4)"
+      boxShadow: "0 0 200px rgba(255,255,255,0.4)",
+      background: "url(" + bg + ") repeat 0 0 #fff",
+      borderTop: "1px solid #e3e3e3",
+      borderRight: "1px solid #e3e3e3",
+      borderBottom: "1px solid #e3e3e3"
     }
   }),
   { name: "GameBoard" }

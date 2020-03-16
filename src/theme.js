@@ -22,6 +22,10 @@ const theme = createMuiTheme({
     h5: {
       fontSize: 40,
       textShadow: "0 0 10px"
+    },
+    h7: {
+      fontSize: 70,
+      textShadow: "0 0 10px"
     }
   }
 });
