@@ -31,7 +31,7 @@ const useStyles = makeStyles(
       right: 0,
       top: 0,
       bottom: 0,
-      background: "url(" + carbon + ") repeat 0 0"
+      background: "url(" + carbon + ") repeat 0 0 #000"
     },
     interogation: {
       textAlign: "center",

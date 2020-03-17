@@ -10,14 +10,14 @@ const useStyles = makeStyles(
   theme => ({
     root: {},
     leBoard: {
-      flex: "0 1 60%",
+      flex: "0 1 50%",
       display: "flex",
       flexWrap: "wrap",
       alignItems: "stretch",
       alignSelf: "center"
     },
     boardLeft: {
-      flex: "0 1 15%",
+      flex: "0 1 20%",
       flexWrap: "wrap",
       alignSelf: "center",
       justifySelf: "center",
@@ -29,7 +29,7 @@ const useStyles = makeStyles(
       borderBottom: "1px solid #e3e3e3"
     },
     boardCenter: {
-      flex: "0 1 65%",
+      flex: "0 1 60%",
       borderRadius: 20,
       boxShadow: "0 0 200px rgba(255,255,255,0.4)",
       background: "url(" + bg + ") repeat 0 0 #fff",
