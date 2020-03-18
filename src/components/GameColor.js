@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/styles";
 import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
+import DragableColor from "./DragableColor";
 
 const useStyles = makeStyles(
   theme => ({
@@ -20,28 +21,6 @@ const useStyles = makeStyles(
     },
     colorHole: {
       margin: 10
-    },
-    color: {
-      width: 50,
-      height: 50,
-
-      borderRadius: 50
-    },
-    isBlue: {
-      background: "radial-gradient(circle at 33px 33px, #4981B3, #484848)",
-      margin: "0 auto"
-    },
-    isRed: {
-      background: "radial-gradient(circle at 33px 33px, #FF8882, #484848)",
-      margin: "0 auto"
-    },
-    isGreen: {
-      background: "radial-gradient(circle at 33px 33px, #25B35B, #484848)",
-      margin: "0 auto"
-    },
-    isYellow: {
-      background: "radial-gradient(circle at 33px 33px, #FFBC4F, #484848)",
-      margin: "0 auto"
     }
   }),
   { name: "GameColor" }
@@ -58,16 +37,16 @@ function GameColor(props) {
       </Typography>
       <div className={classes.colorInner}>
         <div className={classes.colorHole}>
-          <div className={clsx(classes.color, classes.isBlue)}></div>
+          <DragableColor color={"blue"} />
         </div>
         <div className={classes.colorHole}>
-          <div className={clsx(classes.color, classes.isRed)}></div>
+          <DragableColor color={"red"} />
         </div>
         <div className={classes.colorHole}>
-          <div className={clsx(classes.color, classes.isGreen)}></div>
+          <DragableColor color={"green"} />
         </div>
         <div className={classes.colorHole}>
-          <div className={clsx(classes.color, classes.isYellow)}></div>
+          <DragableColor color={"yellow"} />
         </div>
       </div>
     </div>

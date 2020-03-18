@@ -65,7 +65,7 @@ function Header(props) {
   const container = useRef();
   //temporaire pour dev
   useEffect(() => {
-    //setStateApp("game");
+    setStateApp("game");
   }, []);
   //setStateApp("game");
 
